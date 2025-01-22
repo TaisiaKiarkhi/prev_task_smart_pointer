@@ -7,7 +7,7 @@ int main() {
 	size_t size{ 0 };
 	cin >> size;
 
-	auto arr{ std::make_unique<float[]>(size) };
+	auto arr{ std::make_unique<float[]>(size) }; //std::unique_ptr<float[]> arr {std::make_unique<float[]>(size)
 	for (size_t i{}; i < size; i++) {
 		arr[i] = static_cast<float>(1 / pow((1 + i), 2));
 		cout <<endl<< arr[i];
